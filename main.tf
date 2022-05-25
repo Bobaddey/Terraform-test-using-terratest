@@ -1,6 +1,6 @@
 resource "aws_key_pair" "test_auth" {
   key_name   = "test-key"
-  public_key = file("~/.ssh/tftestkey.pub")
+  public_key = file("/home/runner/.ssh/tftestkey.pub")
 }
 
 resource "aws_instance" "Test_instance" {
