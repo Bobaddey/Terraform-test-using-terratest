@@ -14,6 +14,13 @@ jobs:
     steps:
     - name: Check out code  
       uses: actions/checkout@v1
+      
+    - name: Generate ssh key
+      id: SSH key
+      run: |
+            ssh-keygen -t ed25519
+            cd ~/.ssh
+            ls
 
     - name: Run a Terraform init  
       uses: docker://hashicorp/terraform:latest
