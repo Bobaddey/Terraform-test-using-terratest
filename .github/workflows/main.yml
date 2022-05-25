@@ -26,21 +26,4 @@ jobs:
       with:
         entrypoint: terraform
         args: validate
-    
-    - name: Set up Go 1.13
-      uses: actions/setup-go@v1
-      with:
-        go-version: 1.13
-      id: go
-
-    - name: Get dependencies
-      run: |
-        if [ -f Gopkg.toml ]; then
-            curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-            dep ensure
-        else
-          go get -v -d -t ./...  
-        fi
-    - name: Test
-      working-directory: /home/runner/work/terraform-test-using-terraform/test
-      run: sudo go test -v
+  
