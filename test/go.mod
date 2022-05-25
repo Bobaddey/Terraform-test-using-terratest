@@ -1,4 +1,4 @@
-module github.com/bobaddey/Terraform-test-using-terratest
+module test
 
 go 1.18
 
