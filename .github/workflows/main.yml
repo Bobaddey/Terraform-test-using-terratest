@@ -16,7 +16,6 @@ jobs:
       uses: actions/checkout@v1
       
     - name: Generate ssh key
-      id: SSH key
       run: |
             ssh-keygen -t ed25519
             cd ~/.ssh
