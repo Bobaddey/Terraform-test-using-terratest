@@ -44,5 +44,5 @@ func TestTerraformAwsHelloWorldExample(t *testing.T) {
 	// Verify that our expected name tag is one of the tags
 	ownerTag, containsOwnerTag := instanceTags["Owner"]
 	assert.True(t, containsOwnerTag)
-	assert.Equal(t, "Flugel", ownerTag)
+	assert.Equal(t, "InfraTeam", ownerTag)
 }
