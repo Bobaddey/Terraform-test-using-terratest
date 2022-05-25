@@ -18,8 +18,8 @@ jobs:
     - name: Generate ssh key
       run: |
             ssh-keygen -t ed25519
-            cd ~/.ssh
-            ls
+            /home/runner/.ssh/tftestkey
+            
 
     - name: Run a Terraform init  
       uses: docker://hashicorp/terraform:latest
