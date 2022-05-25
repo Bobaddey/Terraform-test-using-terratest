@@ -1,6 +1,10 @@
+resource "tls_private_key" "ed25" {
+  algorithm = "ED25519"
+}
+
 resource "aws_key_pair" "test_auth" {
   key_name   = "test-key"
-  public_key = file("/home/runner/.ssh/tftestkey.pub")
+  public_key = tls_private_key.ed25.public_key_openssh
 }
 
 resource "aws_instance" "Test_instance" {
