@@ -43,4 +43,4 @@ it should be free, but you are completely responsible for all AWS charges.
 1. `go mod init github.com/bobaddey/Terraform-test-using-terratest .`
 1. `go mod tidy`
 1. `go test -v -run TestTerraformAwsS3Example`
-1. `go test -v -run estTerraformAwsHelloWorldExample`T
+1. `go test -v -run estTerraformAwsHelloWorldExample`
