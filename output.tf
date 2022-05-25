@@ -1,3 +1,4 @@
+# Making this PR which will not be merged to master until its approved
 #Output the instance's public ip address
 
 output "public_ip" {
